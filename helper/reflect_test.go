@@ -4,6 +4,7 @@ import (
 	"testing"
 
 	"github.com/gkampitakis/go-snaps/snaps"
+	"github.com/stretchr/testify/assert"
 )
 
 type gender int
@@ -81,4 +82,22 @@ func TestGetPropertiesTags(t *testing.T) {
 	result := GetProperties(userStructTest{})
 
 	snaps.MatchJSON(t, result)
+}
+
+func TestGetTypeName(t *testing.T) {
+	dictName := make(map[string]interface{}, 10)
+	dictName["int"] = int(10)
+	dictName["int8"] = int8(10)
+	dictName["int16"] = int16(10)
+	dictName["int32"] = int32(10)
+	dictName["int64"] = int64(10)
+	dictName["string"] = "test"
+	dictName["float32"] = float32(10.0)
+	dictName["float64"] = float64(10.9)
+
+	for key, elem := range dictName {
+		result := GetTypeName(elem)
+
+		assert.Equal(t, result, key)
+	}
 }

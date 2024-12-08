@@ -29,6 +29,11 @@ func GetProperties(element any) []Property {
 	return result
 }
 
+func GetTypeName(element any) string {
+	t := reflect.TypeOf(element)
+	return t.Name()
+}
+
 func getType(field *reflect.StructField) reflect.Kind {
 	t := field.Type.Kind()
 	return t
