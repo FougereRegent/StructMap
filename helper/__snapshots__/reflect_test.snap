@@ -1,0 +1,145 @@
+
+[TestGetPropertiesInt - 1]
+[
+ {
+  "Name": "Field1",
+  "Tag": "",
+  "Type": 2
+ },
+ {
+  "Name": "Field2",
+  "Tag": "",
+  "Type": 3
+ },
+ {
+  "Name": "Field3",
+  "Tag": "",
+  "Type": 5
+ },
+ {
+  "Name": "Field4",
+  "Tag": "",
+  "Type": 6
+ },
+ {
+  "Name": "PtrField1",
+  "Tag": "",
+  "Type": 22
+ },
+ {
+  "Name": "PtrField2",
+  "Tag": "",
+  "Type": 22
+ },
+ {
+  "Name": "PtrField3",
+  "Tag": "",
+  "Type": 22
+ },
+ {
+  "Name": "PtrField4",
+  "Tag": "",
+  "Type": 22
+ }
+]
+---
+
+[TestGetPropertiesFloat - 1]
+[
+ {
+  "Name": "Field1",
+  "Tag": "",
+  "Type": 13
+ },
+ {
+  "Name": "Field2",
+  "Tag": "",
+  "Type": 14
+ },
+ {
+  "Name": "PtrField1",
+  "Tag": "",
+  "Type": 22
+ },
+ {
+  "Name": "PtrField2",
+  "Tag": "",
+  "Type": 22
+ }
+]
+---
+
+[TestGetPropertiesString - 1]
+[
+ {
+  "Name": "Field1",
+  "Tag": "",
+  "Type": 24
+ },
+ {
+  "Name": "PtrField1",
+  "Tag": "",
+  "Type": 22
+ }
+]
+---
+
+[TestGetProperties - 1]
+[
+ {
+  "Name": "Field1",
+  "Tag": "",
+  "Type": 1
+ },
+ {
+  "Name": "PtrField1",
+  "Tag": "",
+  "Type": 22
+ }
+]
+---
+
+[TestGetPropertiesBoolean - 1]
+[
+ {
+  "Name": "Field1",
+  "Tag": "",
+  "Type": 1
+ },
+ {
+  "Name": "PtrField1",
+  "Tag": "",
+  "Type": 22
+ }
+]
+---
+
+[TestGetPropertiesTags - 1]
+[
+ {
+  "Name": "FirstName",
+  "Tag": "FirstName",
+  "Type": 24
+ },
+ {
+  "Name": "LastName",
+  "Tag": "LastName",
+  "Type": 24
+ },
+ {
+  "Name": "Age",
+  "Tag": "",
+  "Type": 2
+ },
+ {
+  "Name": "Address",
+  "Tag": "Address",
+  "Type": 25
+ },
+ {
+  "Name": "Gender",
+  "Tag": "",
+  "Type": 2
+ }
+]
+---
