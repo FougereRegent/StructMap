@@ -1,4 +1,4 @@
-package helper
+package main
 
 import (
 	"testing"
@@ -26,7 +26,7 @@ func TestGetPropertiesInt(t *testing.T) {
 		PtrField4 *int64
 	}
 
-	result := GetProperties(typeStructIntTest{})
+	result := getProperties(typeStructIntTest{})
 
 	snaps.MatchJSON(t, result)
 }
@@ -39,7 +39,7 @@ func TestGetPropertiesFloat(t *testing.T) {
 		PtrField2 *float64
 	}
 
-	result := GetProperties(typeStructFloatTest{})
+	result := getProperties(typeStructFloatTest{})
 
 	snaps.MatchJSON(t, result)
 }
@@ -50,7 +50,7 @@ func TestGetPropertiesString(t *testing.T) {
 		PtrField1 *string
 	}
 
-	result := GetProperties(typeStructStringTest{})
+	result := getProperties(typeStructStringTest{})
 
 	snaps.MatchJSON(t, result)
 }
@@ -61,7 +61,7 @@ func TestGetPropertiesBoolean(t *testing.T) {
 		PtrField1 *bool
 	}
 
-	result := GetProperties(typeStructBooleanTest{})
+	result := getProperties(typeStructBooleanTest{})
 
 	snaps.MatchJSON(t, result)
 }
@@ -79,7 +79,7 @@ func TestGetPropertiesTags(t *testing.T) {
 		Gender gender
 	}
 
-	result := GetProperties(userStructTest{})
+	result := getProperties(userStructTest{})
 
 	snaps.MatchJSON(t, result)
 }
@@ -96,7 +96,7 @@ func TestGetTypeName(t *testing.T) {
 	dictName["float64"] = float64(10.9)
 
 	for key, elem := range dictName {
-		result := GetTypeName(elem)
+		result := getTypeName(elem)
 
 		assert.Equal(t, result, key)
 	}

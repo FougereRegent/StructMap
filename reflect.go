@@ -1,4 +1,4 @@
-package helper
+package main
 
 import (
 	"reflect"
@@ -12,7 +12,7 @@ type Property struct {
 
 const tagName string = "structmap"
 
-func GetProperties(element any) []Property {
+func getProperties(element any) []Property {
 	t := reflect.TypeOf(element)
 	nbProperties := t.NumField()
 	result := make([]Property, nbProperties)
@@ -29,7 +29,7 @@ func GetProperties(element any) []Property {
 	return result
 }
 
-func GetTypeName(element any) string {
+func getTypeName(element any) string {
 	t := reflect.TypeOf(element)
 	return t.Name()
 }

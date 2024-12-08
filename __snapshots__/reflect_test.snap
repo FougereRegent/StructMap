@@ -84,21 +84,6 @@
 ]
 ---
 
-[TestGetProperties - 1]
-[
- {
-  "Name": "Field1",
-  "Tag": "",
-  "Type": 1
- },
- {
-  "Name": "PtrField1",
-  "Tag": "",
-  "Type": 22
- }
-]
----
-
 [TestGetPropertiesBoolean - 1]
 [
  {
