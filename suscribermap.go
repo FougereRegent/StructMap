@@ -12,10 +12,12 @@ type suscriber struct {
 }
 
 func NewSusciber() suscriber {
-	return suscriber{}
+	return suscriber{
+		structsMaps: make(map[string]dtoMaps),
+	}
 }
 
-func (s *suscriber) AddStructMapp(source, destination interface{}) error {
+func (s *suscriber) AddStructMapp(source, destination interface{}) *suscriber {
 	dict := s.structsMaps
 	keyName := hash(source, destination)
 	if !s.checkIfKeyExist(keyName) {
@@ -23,9 +25,9 @@ func (s *suscriber) AddStructMapp(source, destination interface{}) error {
 			Source:      source,
 			Destination: destination,
 		}
-		return nil
+		return s
 	}
-	return nil
+	panic("Cannot insert twice same object")
 }
 
 func (s *suscriber) checkIfKeyExist(key string) bool {
